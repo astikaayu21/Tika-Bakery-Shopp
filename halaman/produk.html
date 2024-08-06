@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Produk</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../js/scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>Tika's Bakery Shop</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="left">
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="produk.html"><i class="fas fa-box-open"></i> Produk</a></li>
+                <li><a href="transaksi.html"><i class="fas fa-exchange-alt"></i> Transaksi</a></li>
+                <li><a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a></li>
+                <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak Kami</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Produk Kami</h2>
+            <hr>
+            
+            <h3>Cupcake's</h3>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Gambar</th>
+                        <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../gambar/cupcake/Cupcakes_Cherry_Blossom.jpg" alt="cherry_blossom" class="product-image"></td>
+                        <td>cherry blossom</td>
+                        <td>Rp 25.000</td>
+                        <td><button onclick="saveProduct('cherry_blossom', 25000, '../gambar/cupcake/Cupcakes_Cherry_Blossom.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/cupcake/Cupcakes_salted_caramel.jpg" alt="salted_caramel" class="product-image"></td>
+                        <td>salted caramel</td>
+                        <td>Rp 30.000</td>
+                        <td><button onclick="saveProduct('salted_caramel', 30000, '../gambar/cupcake/Cupcakes_salted_caramel.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/cupcake/vanilla-cake.jpg" alt="vanilla_cake" class="product-image"></td>
+                        <td>vanilla cake</td>
+                        <td>Rp 25.000</td>
+                        <td><button onclick="saveProduct('vanilla_cake', 25000, '../gambar/cupcake/vanilla-cake.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/cupcake/pink_princess.jpg" alt="pink_princess" class="product-image"></td>
+                        <td>pink princess</td>
+                        <td>Rp 25.000</td>
+                        <td><button onclick="saveProduct('pink_princess', 25000, '../gambar/cupcake/pink_princess.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/cupcake/raspberry_vanilla.jpg" alt="raspberry_vanilla" class="product-image"></td>
+                        <td>raspberry vanilla</td>
+                        <td>Rp 25.000</td>
+                        <td><button onclick="saveProduct('raspberry_vanilla', 25000, '../gambar/cupcake/raspberry_vanilla.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/cupcake/raspberry_chocolate.jpg" alt="raspberry_chocolate" class="product-image"></td>
+                        <td>raspberry chocolate</td>
+                        <td>Rp 25.000</td>
+                        <td><button onclick="saveProduct('raspberry_chocolate', 25000, '../gambar/cupcake/raspberry_chocolate.jpg')">Beli</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Drinks</h3>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Gambar</th>
+                        <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../gambar/Drinks/greentea.jpg" alt="greentea" class="product-image"></td>
+                        <td>Green Tea</td>
+                        <td>Rp 15.000</td>
+                        <td><button onclick="saveProduct('greentea', 15000, '../gambar/Drinks/greentea.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/Drinks/mango_smoothie.jpg" alt="mango_smoothie" class="product-image"></td>
+                        <td>Mango Smoothie</td>
+                        <td>Rp 15.000</td>
+                        <td><button onclick="saveProduct('mango_smoothie', 15000, '../gambar/Drinks/mango_smoothie.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/Drinks/mocha_cheese.jpg" alt="mocha_cheese" class="product-image"></td>
+                        <td>Mocha Cheese</td>
+                        <td>Rp 10.000</td>
+                        <td><button onclick="saveProduct('mocha_cheese', 10000, '../gambar/Drinks/mocha_cheese.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/Drinks/red_velvet.jpg" alt="redvelvet" class="product-image"></td>
+                        <td>Red Velvet</td>
+                        <td>Rp 10.000</td>
+                        <td><button onclick="saveProduct('redvelvet', 10000, '../gambar/Drinks/red_velvet.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/Drinks/taro.jpg" alt="taro" class="product-image"></td>
+                        <td>Taro</td>
+                        <td>Rp 10.000</td>
+                        <td><button onclick="saveProduct('taro', 10000, '../gambar/Drinks/taro.jpg')">Beli</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Bakery Menu</h3>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Gambar</th>
+                        <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../gambar/bakeryMenus/chocolate_chip.jpg" alt="chocolate_chip" class="product-image"></td>
+                        <td>chocolate Chip</td>
+                        <td>Rp 20.000</td>
+                        <td><button onclick="saveProduct('chocolate_chip', 20000, '../gambar/bakeryMenus/chocolate_chip.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/bakeryMenus/chocolate_truffle.jpg" alt="chocolate_truffle" class="product-image"></td>
+                        <td>Chocolate Truffle</td>
+                        <td>Rp 15.000</td>
+                        <td><button onclick="saveProduct('chocolate_truffle', 15000, '../gambar/bakeryMenus/chocolate_truffle.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/bakeryMenus/oatmeal_raisin.jpg" alt="oatmeal_raisin" class="product-image"></td>
+                        <td>Oatmeal Raisin</td>
+                        <td>Rp 15.000</td>
+                        <td><button onclick="saveProduct('oatmeal_raisin', 15000, '../gambar/bakeryMenus/oatmeal_raisin.jpg')">Beli</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../gambar/bakeryMenus/tiramisu.jpg" alt="tiramisu" class="product-image"></td>
+                        <td>Tiramisu</td>
+                        <td>Rp 15.000</td>
+                        <td><button onclick="saveProduct('tiramisu', 15000, '../gambar/bakeryMenus/tiramisu.jpg')">Beli</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </main>
+        <aside class="right">
+            <h3>Kategori Produk</h3>
+            <ul>
+                <li><a href="produk.html"><i class="fas fa-birthday-cake"></i> Cupcakes</a></li>
+                <li><a href="produk.html"><i class="fas fa-bread-slice"></i> Bakery</a></li>
+                <li><a href="produk.html"><i class="fas fa-coffee"></i> Drinks</a></li>
+            </ul>
+            
+            <h3>Promosi</h3>
+            <p>Dapatkan diskon 20% untuk pembelian pertama Anda!</p>
+            
+            <h3>Testimoni Pelanggan</h3>
+            <p>"Kue terbaik yang pernah saya coba!" - Andi</p>
+            <p>"Pelayanan yang sangat ramah dan cepat." - Budi</p>
+            
+            <h3>Kontak Cepat</h3>
+            <p>Tel: 123-456-7890</p>
+            <p>Email: info@tikabakery.com</p>
+            
+            <h3>Ikuti Kami</h3>
+            <p>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a> | 
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a> | 
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tika's Bakery Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

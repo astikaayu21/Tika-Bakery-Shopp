@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>invoice</title>    
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        function loadInvoice() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nama = urlParams.get('nama');
+            const alamat = urlParams.get('alamat');
+            const produk = urlParams.get('produk');
+            const harga = urlParams.get('harga');
+            const jumlah = urlParams.get('jumlah');
+            const total = urlParams.get('total');
+            const image = urlParams.get('image');
+
+            document.getElementById('invoice-nama').innerText = nama;
+            document.getElementById('invoice-alamat').innerText = alamat;
+            document.getElementById('invoice-produk').innerText = produk.replace('_', ' ');
+            document.getElementById('invoice-harga').innerText = 'Rp ' + harga;
+            document.getElementById('invoice-jumlah').innerText = jumlah;
+            document.getElementById('invoice-total').innerText = 'Rp ' + total;
+            document.getElementById('invoice-image').src = image;
+
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString();
+            const formattedTime = now.toLocaleTimeString();
+            document.getElementById('invoice-date').innerText = formattedDate;
+            document.getElementById('invoice-time').innerText = formattedTime;
+        }
+
+        window.onload = loadInvoice;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tika's Bakery Shop</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="left">
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="produk.html"><i class="fas fa-box-open"></i> Produk</a></li>
+                <li><a href="transaksi.html"><i class="fas fa-exchange-alt"></i> Transaksi</a></li>
+                <li><a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a></li>
+                <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak Kami</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div class="invoice-container">
+                <div class="invoice-header">
+                    <h1>Invoice Pembelian</h1>
+                </div>
+                <div class="invoice-image">
+                    <img id="invoice-image" src="" alt="Gambar Produk">
+                </div>
+                <div class="invoice-details">
+                    <p><strong>Nama:</strong> <span id="invoice-nama"></span></p>
+                    <p><strong>Alamat:</strong> <span id="invoice-alamat"></span></p>
+                    <p><strong>Produk:</strong> <span id="invoice-produk"></span></p>
+                    <p><strong>Harga:</strong> <span id="invoice-harga"></span></p>
+                    <p><strong>Jumlah:</strong> <span id="invoice-jumlah"></span></p>
+                    <p><strong>Total Harga:</strong> <span id="invoice-total"></span></p>
+                    <div class="invoice-date-time">
+                        <p><strong>Tanggal:</strong> <span id="invoice-date"></span></p>
+                        <p><strong>Waktu:</strong> <span id="invoice-time"></span></p>
+                    </div>
+                </div>
+                <div class="invoice-footer">
+                    <p>Terima kasih telah melakukan pembelian!</p>
+                </div>
+            </div>
+        </main>
+        <aside class="right">
+            <h3>Kategori Produk</h3>
+            <ul>
+                <li><a href="produk.html"><i class="fas fa-birthday-cake"></i> Cupcakes</a></li>
+                <li><a href="produk.html"><i class="fas fa-bread-slice"></i> Bakery</a></li>
+                <li><a href="produk.html"><i class="fas fa-coffee"></i> Drinks</a></li>
+            </ul>
+            
+            <h3>Promosi</h3>
+            <p>Dapatkan diskon 20% untuk pembelian pertama Anda!</p>
+            
+            <h3>Testimoni Pelanggan</h3>
+            <p>"Kue terbaik yang pernah saya coba!" - Andi</p>
+            <p>"Pelayanan yang sangat ramah dan cepat." - Budi</p>
+            
+            <h3>Kontak Cepat</h3>
+            <p>Tel: 123-456-7890</p>
+            <p>Email: info@tikabakery.com</p>
+            
+            <h3>Ikuti Kami</h3>
+            <p>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a> | 
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a> | 
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tika's Bakery Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
